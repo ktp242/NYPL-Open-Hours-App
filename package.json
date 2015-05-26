@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ktp242/NYPL-Open-Hours-App/issues"
   },
-  "homepage": "https://github.com/ktp242/NYPL-Open-Hours-App"
+  "homepage": "https://github.com/ktp242/NYPL-Open-Hours-App",
+  "dependencies": {
+    "mime": "1.3.4",
+  }
 }
