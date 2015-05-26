@@ -1,0 +1,20 @@
+{
+  "name": "NYPL-Open-Hours-App",
+  "version": "1.0.0",
+  "description": "This is the assignment for NYPL interview. The task is building an application to check the open hours of different branches based on NYPL's location API.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ktp242/NYPL-Open-Hours-App.git"
+  },
+  "author": "Kang Peng",
+  "license": "Kang Peng",
+  "bugs": {
+    "url": "https://github.com/ktp242/NYPL-Open-Hours-App/issues"
+  },
+  "homepage": "https://github.com/ktp242/NYPL-Open-Hours-App"
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html lang="en" class="no-js ie ie8"><![endif]-->
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<title>
+		   NYPL Open Hours Application
+		</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/ctrl/initialize.js"></script>
+		<script type="text/javascript" src="/js/model/branchData.js"></script>
+		<script type="text/javascript" src="/js/view/renderIndex.js"></script>
+		<script type="text/javascript" src="/js/view/renderSlug.js"></script>
+		<script>
+        window.addEventListener("load", app.view.renderIndex.getLocData);
+        </script>
+	</head>
+	<body>
+		<header class="text-center">
+			 <h1>NYPL Open Hours Application</h1>
+		</header>
+
+		<main class="text-center">
+			 <div>
+				<select class="choose-branch">
+					<option selected value="base">Please Choose A Branch</option>
+				</select>
+                <br/>
+                <br/>
+                <p><h3>Enter the number of the days</h3></p>
+                <input class="choose-day" type="number" name="FirstName" value="0"><br>
+                <br/>
+                <br/>
+			    <button onclick="app.view.renderSlug.getSlug()">Confirm Selection</button>
+			 </div>
+
+			 <div class="slug-result">
+			 <p><h2>To get the URL endpoint of application along with the location slug, please select a branch above.</h2></p>
+			 <p><h2>By entering the number of the days, you can see if the branch is open that number of days in the future from now. Default is 0. The input is not a number, not an integer or less than 0 will be set as default.</h2></p>
+			 <p><h2>After done your selection, press "Confirm Selection" to get the URL.</h2></p>
+			 </div>
+		</main>
+	</body>
+</html>
