@@ -18,6 +18,7 @@ Prerequisite: The application needs NodeJS. Please install NodeJS at your local 
 
 1. With the browser you like, link to [http://localhost:1234/index.html](http://localhost:1234/index.html). This will lead you to the homepage of the application.
 2. There are one droptown menu and one input field at the homepage. The dropdown menu is for you to choose a branch for New York Public Library. The input field is for you to choose the number of days. It is mandatory to choose a branch for requesting the result, but you can leave the input field for the number of the days unselected. The default value of it is 0.
+
 * If you enter the input other than a number, or the number is less than 0, the input value will be set to 0 as well. If you enter a float, for exampe, 4.5, the value after decimal place will be eliminated, so 4.5 will be 4.
 
 3. After you choose the branch and the number of days, press "Confirm Selection," and the application will generate a URL for requesting later.
