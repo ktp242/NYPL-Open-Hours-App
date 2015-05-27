@@ -22,22 +22,28 @@
 
 		<main class="text-center">
 			 <div>
+				<p><h3>STEP 1: Choose one of the branches</h3></p>
 				<select class="choose-branch">
 					<option selected value="base">Please Choose A Branch</option>
 				</select>
                 <br/>
                 <br/>
-                <p><h3>Enter the number of the days</h3></p>
-                <input class="choose-day" type="number" name="FirstName" value="0"><br>
+				<p><h3>STEP 2: Choose one of the two options:</h3></p>
+				<div>
+					<input type="radio" class="choose-option" name="option" value="a" checked="checked">A. Enter the number of days. The application will show if the branch is open after the number of days in the future.<br/>
+					<input type="radio" class="choose-option" name="option" value="b">B. Enter the date and time you want to chenck if the branch is open. Please follow the format:"YYYY-MM-DD HH:MM:SS" and the hour is military time format.
+				</div>
                 <br/>
+                <p><h3>STEP 3: Enter the number of days or the time stamp</h3></p>
+				<input class="text-input" type="text" name="text-input" value="0"><br>
                 <br/>
 			    <button onclick="app.view.renderSlug.getSlug()">Confirm Selection</button>
 			 </div>
 
 			 <div class="slug-result">
-			 <p><h2>To get the URL endpoint of application along with the location slug, please select a branch above.</h2></p>
-			 <p><h2>By entering the number of the days, you can see if the branch is open that number of days in the future from now. Default is 0. The input is not a number, not an integer or less than 0 will be set as default.</h2></p>
-			 <p><h2>After done your selection, press "Confirm Selection" to get the URL.</h2></p>
+			 <p><h3>To get the URL endpoint of application along with the location slug, please select a branch above.</h3></p>
+			 <p><h3>By entering the number of the days, you can see if the branch is open that number of days in the future from now. Default is 0. The input is not a number, not an integer or less than 0 will be set as default.</h3></p>
+			 <p><h3>After done your selection, press "Confirm Selection" to get the URL.</h3></p>
 			 </div>
 		</main>
 	</body>
