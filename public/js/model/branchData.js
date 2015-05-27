@@ -1,9 +1,12 @@
+// The model for requesting and manipulating the data from NYPL API
 BranchData = function(){
 	this.currentPage;
 };
 
+// The array for storing the data after we rearrange it from NYPL API
 BranchData.branchNameHourArray = [];
 
+// Get the data from NYPL API
 BranchData.getLocData = function(currentPage){
 	var self = this;
 	self.currentPage = currentPage;
@@ -19,9 +22,11 @@ BranchData.getLocData = function(currentPage){
 	});
 };
 
+// The callback function to rearrange the data 
+// once we successfully request NYPL API
 BranchData.getBranchHours = function(data){
 
-	// Get the names and regular hour array of the branches
+	// Get the name, regular hour, and slug of the branches
 	for (var i = 0; i < data.locations.length; i++){
 
 		var branchName = data.locations[i].name;
@@ -61,6 +66,9 @@ BranchData.getBranchHours = function(data){
 		};
 	};
 
+   // Check which page the calling view render is on.
+   // And then call different function of the view render 
+   // after requesting data from NYPL API is done 
 	if (BranchData.branchNameHourArray){
 		switch (BranchData.currentPage){
 			case 'index':
