@@ -82,7 +82,7 @@ app.view.renderResult = {
 							} else {
 								$('.branch-name').empty();
 								$('.branch-name').append(array[i].name);
-								$('.open-close').append("This branch is close now.");
+								$('.open-close').append("This branch is closed now.");
 							}
 						}
 					}
