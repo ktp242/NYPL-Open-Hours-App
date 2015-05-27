@@ -47,7 +47,7 @@ h4 {
 }
 
 .open-close{
-	padding-left: 50px;
+	padding-left: 30px;
 }
 
 .radio-form {
@@ -61,10 +61,11 @@ h4 {
 }
 
 .schedule {
-	padding-left: 50px;
+	padding-left: 30px;
 }
 
 .slug-result {
+	font-family: "Verdana", Arial, sans-serif;
 	margin: 10px auto;
 	width: 600px;
 }

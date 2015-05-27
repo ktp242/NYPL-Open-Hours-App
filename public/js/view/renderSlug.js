@@ -22,11 +22,11 @@ app.view.renderSlug = {
 					if (daySlug < 0){
 						daySlug = 0;
 					}
-					$('.slug-result').append("<p><h2>" + "Your application endpoint is <br/>http://" + location.hostname + ":" + location.port + "/" + branchSlug + "/" + daySlug + "</h2></p>");	
+					$('.slug-result').append("<p><h3>" + "Your application endpoint is</h3><h2>http://" + location.hostname + ":" + location.port + "/" + branchSlug + "/" + daySlug + "</h2></p>");	
 				break;			
 				case 'b':
 					daySlug = inputValue.split(" ").join("T");
-					$('.slug-result').append("<p><h2>" + "Your application endpoint is <br/>http://" + location.hostname + ":" + location.port + "/" + branchSlug + "/" + daySlug + "</h2></p>");
+					$('.slug-result').append("<p><h3>" + "Your application endpoint is</h3><h2>http://" + location.hostname + ":" + location.port + "/" + branchSlug + "/" + daySlug + "</h2></p>");
 				break;
 				default:
 					console.log('no option indicated');
