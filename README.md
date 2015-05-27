@@ -15,8 +15,7 @@ Prerequisite: The application needs NodeJS. Please install NodeJS at your local 
 
 1. With the browser you like, link to [http://localhost:1234/index.html](http://localhost:1234/index.html). This will lead you to the homepage of the application.
 
-2. Follow the steps indicated on the homepage to use the application. 
-   <Step 1: Choose the branch you want to look up. This step is mandatory. 
+2. Follow the steps indicated on the homepage to use the application. <br>Step 1: Choose the branch you want to look up. This step is mandatory. 
    
    Step 2: Choose which optional function you want to use at this time. If you choose to look up if the branch will be open after a number of days in the future, choose option A. If you want to look up if the branch will or was open at a certain time, choose option B. Only one function a time. The default setting is option A.
    
