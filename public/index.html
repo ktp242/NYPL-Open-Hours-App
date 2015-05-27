@@ -21,7 +21,7 @@
 		</header>
 
 		<main class="text-center">
-			 <div>
+			 <div class="container">
 				<p><h3>STEP 1: Choose one of the branches</h3></p>
 				<select class="choose-branch">
 					<option selected value="base">Please Choose A Branch</option>
@@ -29,13 +29,13 @@
                 <br/>
                 <br/>
 				<p><h3>STEP 2: Choose one of the two options:</h3></p>
-				<div>
-					<input type="radio" class="choose-option" name="option" value="a" checked="checked">A. Enter the number of days. The application will show if the branch is open after the number of days in the future.<br/>
-					<input type="radio" class="choose-option" name="option" value="b">B. Enter the date and time you want to chenck if the branch is open. Please follow the format:"YYYY-MM-DD HH:MM:SS" and the hour is military time format.
+				<div class="radio-form">
+					<h4><input type="radio" class="choose-option" name="option" value="a" checked="checked">A. Enter the number of days. The application will show if the branch is open after the number of days in the future.</h4><br/>
+					<h4><input type="radio" class="choose-option" name="option" value="b">B. Enter the date and time you want to chenck if the branch is open. Please follow the format:"YYYY-MM-DD HH:MM:SS" and the hour is military time format.</h4>
 				</div>
                 <br/>
                 <p><h3>STEP 3: Enter the number of days or the time stamp</h3></p>
-				<input class="text-input" type="text" name="text-input" value="0"><br>
+				<input class="text-input" type="text" name="text-input" value=""><br>
                 <br/>
 			    <button onclick="app.view.renderSlug.getSlug()">Confirm Selection</button>
 			 </div>

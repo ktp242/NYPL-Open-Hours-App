@@ -37,7 +37,7 @@ app.view.renderResult = {
 		    if (daySlug.split("-").length > 1){   
 			    showTimeResult(BranchData.branchNameHourArray);
 			} else {
-				if (parseInt(daySlug, 10)){	
+				if (parseInt(daySlug, 10) || parseInt(daySlug, 10) == 0){	
 					showFutureResult(BranchData.branchNameHourArray);
 				} else {
 					$('.branch-name').empty();
