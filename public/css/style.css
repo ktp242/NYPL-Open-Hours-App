@@ -1,15 +1,83 @@
+body {
+	margin: 0;
+}
+
 h1 {
 	font-size: 2em;
+	font-family: "Verdana", Arial, sans-serif;
 }
 
 h2 {
 	font-size: 1.5em;
+	font-family: "Verdana", Arial, sans-serif;
 }
 
 h3 {
 	font-size: 1.2em;
+	font-family: "Verdana", Arial, sans-serif;
+}
+
+h4 {
+	font-size: 1.0em;
+	font-family: "Verdana", Arial, sans-serif;
+}
+
+.branch-name {
+
+}
+
+.choose-branch {
+	display: block;
+	text-align: left;
+}
+
+.confirm-btn {
+	text-align: center;
+}
+
+.container {
+	background-color: lightgray;
+	margin: 0 auto;
+	padding: 20px 30px;
+	width: 600px;
+}
+
+.container h3 {
+	text-align: left;
+}
+
+.open-close{
+	padding-left: 50px;
+}
+
+.radio-form {
+	margin: 0 auto;
+	width: 600px;
+}
+
+.radio-form h4{
+	margin: 0;
+	text-align: left;
+}
+
+.schedule {
+	padding-left: 50px;
+}
+
+.slug-result {
+	margin: 10px auto;
+	width: 600px;
+}
+
+.slug-result h4{
+	text-align: left;
 }
 
 .text-center {
 	text-align: center;
+}
+
+.text-input {
+	display: block;
+	text-align: left;
 }

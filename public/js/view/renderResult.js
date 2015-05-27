@@ -72,7 +72,7 @@ app.view.renderResult = {
 								var openNum = parseInt(open[0], 10);
 								var closeNum = parseInt(close[0], 10);
 								// Render open hour of the day
-								$('.schedule').append("<p><h3>" + array[i].day[j].day + ": " + array[i].day[j].open + " - " + array[i].day[j].close + "</h3></p>");
+								$('.schedule').append("<h3>" + array[i].day[j].day + ": " + array[i].day[j].open + " - " + array[i].day[j].close + "</h3>");
 							}
 							// Check if the branch is open at the current of time
 							if (CurrentTime.hourNow >= openNum && CurrentTime.hourNow < closeNum) {
@@ -101,7 +101,7 @@ app.view.renderResult = {
 				// and render the data to the page
 				if (branchSlug == array[i].slug){
 					$('.schedule').empty();
-					$('.schedule').append("<br/><p><h3>The open schedule for the day " + daySlug + " days from now is as below:</h3></p>");
+					$('.schedule').append("<br/><p><h3>The open schedule for " + daySlug + " days after is as below:</h3></p>");
 					// Loop through the open hours of the week
 					for (var j = 0; j < array[i].day.length; j++) {
 						// Find the open hour of the day which equals to 
@@ -109,9 +109,9 @@ app.view.renderResult = {
 						if (CurrentTime.dayFuture == array[i].day[j].day){
 							
 							if (array[i].day[j].open == null) {
-								$('.schedule').append("<p><h3>" + array[i].day[j].day + " is not open.</h3></p>");
+								$('.schedule').append("<h3>" + array[i].day[j].day + " is not open.</h3>");
 							} else {
-								$('.schedule').append("<p><h3>" + array[i].day[j].day + ": " + array[i].day[j].open + " - " + array[i].day[j].close + "</h3></p>");
+								$('.schedule').append("<h3>" + array[i].day[j].day + ": " + array[i].day[j].open + " - " + array[i].day[j].close + "</h3>");
 		                    }
 
 							if (array[i].day[j].open == null) {
@@ -128,11 +128,11 @@ app.view.renderResult = {
 							if (CurrentTime.hourNow >= openNum && CurrentTime.hourNow < closeNum) {
 								$('.branch-name').empty();
 								$('.branch-name').append(array[i].name);
-								$('.open-close').append("This branch will be open in " + daySlug + " days from now.");
+								$('.open-close').append("This branch will be open at the same time of now " + daySlug + " days after.");
 							} else {
 								$('.branch-name').empty();
 								$('.branch-name').append(array[i].name);
-								$('.open-close').append("This branch will be closed in " + daySlug + " days from now.");
+								$('.open-close').append("This branch will be closed at the same time of now " + daySlug + " days after.");
 							}
 						}
 					};
@@ -160,9 +160,9 @@ app.view.renderResult = {
 						// Check the day of the indicated date
 						if (CurrentTime.dayInput == array[i].day[j].day){
 							if (array[i].day[j].open == null) {
-								$('.schedule').append("<p><h3>" + array[i].day[j].day + " is not open.</h3></p>");
+								$('.schedule').append("<h3>" + array[i].day[j].day + " is not open.</h3>");
 							} else {
-								$('.schedule').append("<p><h3>" + array[i].day[j].day + ": " + array[i].day[j].open + " - " + array[i].day[j].close + "</h3></p>");
+								$('.schedule').append("<h3>" + array[i].day[j].day + ": " + array[i].day[j].open + " - " + array[i].day[j].close + "</h3>");
 		                    }
 
 							if (array[i].day[j].open == null) {

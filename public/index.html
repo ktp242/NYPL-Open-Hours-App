@@ -19,14 +19,12 @@
 		<header class="text-center">
 			 <h1>NYPL Open Hours Application</h1>
 		</header>
-
 		<main class="text-center">
 			 <div class="container">
 				<p><h3>STEP 1: Choose one of the branches</h3></p>
 				<select class="choose-branch">
 					<option selected value="base">Please Choose A Branch</option>
 				</select>
-                <br/>
                 <br/>
 				<p><h3>STEP 2: Choose one of the two options:</h3></p>
 				<div class="radio-form">
@@ -37,13 +35,11 @@
                 <p><h3>STEP 3: Enter the number of days or the time stamp</h3></p>
 				<input class="text-input" type="text" name="text-input" value=""><br>
                 <br/>
-			    <button onclick="app.view.renderSlug.getSlug()">Confirm Selection</button>
+			    <button class="confirm-btn" onclick="app.view.renderSlug.getSlug()">Confirm Selection</button>
 			 </div>
-
 			 <div class="slug-result">
-			 <p><h3>To get the URL endpoint of application along with the location slug, please select a branch above.</h3></p>
-			 <p><h3>By entering the number of the days, you can see if the branch is open that number of days in the future from now. Default is 0. The input is not a number, not an integer or less than 0 will be set as default.</h3></p>
-			 <p><h3>After done your selection, press "Confirm Selection" to get the URL.</h3></p>
+				 <p><h4>To get the URL endpoint of application, please follow the steps above.
+				 After done your selection, press "Confirm Selection" to get the URL.</h4></p>
 			 </div>
 		</main>
 	</body>
