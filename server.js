@@ -43,7 +43,7 @@ function requestHandler(req, res) {
 http.createServer(requestHandler)
  
 //step 3) listen for an HTTP request on port 3000
-.listen(8080);
+.listen(1234);
 
 //helper function handles file verification
 function getFile(filePath,res,result,mimeType){
@@ -89,4 +89,4 @@ function getFile(filePath,res,result,mimeType){
     });
 };  
   
-sys.puts("Server running at http://localhost:8080/");  
+sys.puts("Server running at http://localhost:1234/");  
