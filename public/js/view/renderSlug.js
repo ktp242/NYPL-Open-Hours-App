@@ -5,15 +5,9 @@ app.view.renderSlug = {
 		var daySlug = $('.choose-day').val();
 		var daySlugNum;
 
-        if (daySlug % 1 === 0) {
-        	daySlugNum = parseInt(daySlug);
-        } else {
-        	daySlugNum = 0;
-        }
+		daySlugNum = parseInt(daySlug, 10) || 0;
 		
-		if (daySlugNum && daySlugNum > 0){
-			daySlugNum = daySlugNum;
-		} else {
+		if (daySlugNum < 0){
 			daySlugNum = 0;
 		}
 
