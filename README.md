@@ -10,6 +10,7 @@ Prerequisite: The application needs NodeJS. Please install NodeJS at your local 
 1. Clone the repository to your local machine.
 2. Get into your applcation folder with your Terminal(OS) or CMD (Windows) and execute "npm install".
 3. Run "node server.js." The application will start a server at "http://localhost:1234".
+
 _If you find that you can't listen to the port, please check if the port is occupied by other applications._
 
 
