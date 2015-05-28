@@ -8,7 +8,7 @@ BranchData.branchNameHourArray = [];
 
 // Get the data from NYPL API
 BranchData.getLocData = function(currentPage){
-	var self = this;
+	self = this;
 	self.currentPage = currentPage;
 
 	// API to get branches locations data
@@ -27,14 +27,14 @@ BranchData.getLocData = function(currentPage){
 BranchData.getBranchHours = function(data){
 
 	// Get the name, regular hour, and slug of the branches
-	for (var i = 0; i < data.locations.length; i++){
+	for (i = 0; i < data.locations.length; i++){
 
-		var branchName = data.locations[i].name;
-		var locHours = data.locations[i].hours['regular'];
-		var slug = data.locations[i].slug;
+		branchName = data.locations[i].name;
+		locHours = data.locations[i].hours['regular'];
+		slug = data.locations[i].slug;
 		
 		// Create a new object to store branch name and open hour
-		var branchNameHour = {};
+		branchNameHour = {};
 		
 		// Create a new object for the open hour of different day
 		branchNameHour["day"] = [];
@@ -53,10 +53,10 @@ BranchData.getBranchHours = function(data){
 		};
 
 		// Get the hours of each day from regular hour array
-		for (var j = 0; j < locHours.length; j++){
-			var day = locHours[j].day;
-			var close = locHours[j].close;
-			var open = locHours[j].open;
+		for (j = 0; j < locHours.length; j++){
+			day = locHours[j].day;
+			close = locHours[j].close;
+			open = locHours[j].open;
 
 			dayHours = {};
 			dayHours["day"] = day;

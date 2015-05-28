@@ -12,10 +12,11 @@ app.view.renderResult = {
 	// Based on the slug and parameter, call different function of
 	// BranchData
 	isOpen: function(){
-		var pathname = location.pathname;
-		var slugs = pathname.split("/");
 		var branchSlug;
 		var daySlug;
+		
+		pathname = location.pathname;
+		slugs = pathname.split("/");
 		
 		// Analyze the slug and parameter 
 		// Throw error if the URL is incorrect
@@ -51,26 +52,26 @@ app.view.renderResult = {
         // The function for render the open result based on current time
 		function showResult(array) {
 			// Loop through the array contains data from NYPL API
-			for (var i = 0; i < array.length; i++) {
+			for (i = 0; i < array.length; i++) {
 				// Find data of the brach selected 
 				// and render the data to the page
 				if (branchSlug == array[i].slug){
 					$('.schedule').empty();
 					$('.schedule').append("<br/><p><h3>The open schedule for today is as below:</h3></p>");
 					// Loop through the open hours of the week 
-					for (var j = 0; j < array[i].day.length; j++) {
+					for (j = 0; j < array[i].day.length; j++) {
 						// Find the open hour of the day which equals to the day today
 						if (CurrentTime.dayNow == array[i].day[j].day){
 							// Check if it is not open on that day
 							if (array[i].day[j].open == null) {
-								var open = -1;
-								var close = -1;
+								open = -1;
+								close = -1;
 								$('.schedule').append("<p><h3>" + array[i].day[j].day + " is not open.</h3></p>");
 							} else {
-								var open = array[i].day[j].open.split(':');
-								var close = array[i].day[j].close.split(':');
-								var openNum = parseInt(open[0], 10);
-								var closeNum = parseInt(close[0], 10);
+								open = array[i].day[j].open.split(':');
+								close = array[i].day[j].close.split(':');
+								openNum = parseInt(open[0], 10);
+								closeNum = parseInt(close[0], 10);
 								// Render open hour of the day
 								$('.schedule').append("<h3>" + array[i].day[j].day + ": " + array[i].day[j].open + " - " + array[i].day[j].close + "</h3>");
 							}
@@ -96,14 +97,14 @@ app.view.renderResult = {
 			// Get the time info via CurrentTime 
 			CurrentTime.getFutureTime(daySlug);
 			// Loop through the array contains data from NYPL API
-			for (var i = 0; i < array.length; i++) {
+			for (i = 0; i < array.length; i++) {
 				// Find data of the brach selected 
 				// and render the data to the page
 				if (branchSlug == array[i].slug){
 					$('.schedule').empty();
 					$('.schedule').append("<br/><p><h3>The open schedule for " + daySlug + " days after is as below:</h3></p>");
 					// Loop through the open hours of the week
-					for (var j = 0; j < array[i].day.length; j++) {
+					for (j = 0; j < array[i].day.length; j++) {
 						// Find the open hour of the day which equals to 
 						// the iindicated day 
 						if (CurrentTime.dayFuture == array[i].day[j].day){
@@ -115,14 +116,14 @@ app.view.renderResult = {
 		                    }
 
 							if (array[i].day[j].open == null) {
-								var open = -1;
-								var close = -1;
+								open = -1;
+								close = -1;
 							} else {
-								var open = array[i].day[j].open.split(':');
-								var close = array[i].day[j].close.split(':');
+								open = array[i].day[j].open.split(':');
+								close = array[i].day[j].close.split(':');
 
-								var openNum = parseInt(open[0], 10);
-								var closeNum = parseInt(close[0], 10);
+								openNum = parseInt(open[0], 10);
+								closeNum = parseInt(close[0], 10);
 							}
 	
 							if (CurrentTime.hourNow >= openNum && CurrentTime.hourNow < closeNum) {
@@ -147,16 +148,16 @@ app.view.renderResult = {
 			// Get the time info via CurrentTime
 			CurrentTime.getStampTime(daySlug);
 			// Render the time indicated on the page
-			var dateInput = CurrentTime.monthInput + "/" + CurrentTime.dateInput + "/" + CurrentTime.yearInput;
+			dateInput = CurrentTime.monthInput + "/" + CurrentTime.dateInput + "/" + CurrentTime.yearInput;
 			// Loop through the array contains data from NYPL API
-			for (var i = 0; i < array.length; i++) {
+			for (i = 0; i < array.length; i++) {
 				// Find data of the brach selected 
 				// and render the data to the page
 				if (branchSlug == array[i].slug){
 					$('.schedule').empty();
 					$('.schedule').append("<br/><p><h3>The open schedule for " + dateInput + " is as below:</h3></p>");
 					// Loop through the open hours of the week
-					for (var j = 0; j < array[i].day.length; j++) {
+					for (j = 0; j < array[i].day.length; j++) {
 						// Check the day of the indicated date
 						if (CurrentTime.dayInput == array[i].day[j].day){
 							if (array[i].day[j].open == null) {
@@ -166,14 +167,14 @@ app.view.renderResult = {
 		                    }
 
 							if (array[i].day[j].open == null) {
-								var open = -1;
-								var close = -1;
+								open = -1;
+								close = -1;
 							} else {
-								var open = array[i].day[j].open.split(':');
-								var close = array[i].day[j].close.split(':');
+								open = array[i].day[j].open.split(':');
+								close = array[i].day[j].close.split(':');
 
-								var openNum = parseInt(open[0], 10);
-								var closeNum = parseInt(close[0], 10);
+								openNum = parseInt(open[0], 10);
+								closeNum = parseInt(close[0], 10);
 							}
 							// Check if the branch is open at that time 
 							// and render the result

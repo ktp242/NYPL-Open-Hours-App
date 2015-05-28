@@ -8,7 +8,7 @@ app.view.renderIndex = {
 
 	// Render the dropdown menu
 	renderDropdown: function(){
-		for (var i = 0; i < BranchData.branchNameHourArray.length; i++) {
+		for (i = 0; i < BranchData.branchNameHourArray.length; i++) {
 		    $('.choose-branch').append("<option value=" + BranchData.branchNameHourArray[i].slug + ">" + BranchData.branchNameHourArray[i].name + "</option>");
 		};
 	}
